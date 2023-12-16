@@ -10,7 +10,13 @@
                 content.</p>
             <a asp-action="Get" asp-route-id="@Model.ProductId" class="btn btn-primary">
                 <i class="fa-solid fa-arrow-right"></i>
-                Go somewhere</a>
+                Get Details</a>
+
+
+            <a asp-action="Delete" asp-route-id="@Model.ProductId" class="btn btn-danger">
+                <i class="fa-solid fa-trash"></i>
+                Delete
+            </a>
         </div>
     </div>
 </div>
