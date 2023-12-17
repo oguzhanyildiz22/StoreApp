@@ -1,0 +1,26 @@
+@model StoreApp.Models.Product
+
+<h1 class="display-4">Update Product</h1>
+
+<form method="post">
+    <div class="mb-3">
+        <label for="ProductName" class="form-label">Product Name</label>
+        <input type="text" class="form-control" id="ProductName" name="ProductName" value="@Model.ProductName" required>
+    </div>
+    <div class="mb-3">
+        <label for="Price" class="form-label">Price</label>
+        <input type="number" class="form-control" id="Price" name="Price" value="@Model.Price" required>
+    </div>
+    <div class="mb-3">
+        <label for="Description" class="form-label">Description</label>
+        <textarea class="form-control" id="Description" name="Description">@Model.Description</textarea>
+    </div>
+    <div class="mb-3">
+        <label for="Quantity" class="form-label">Quantity</label>
+        <input type="number" class="form-control" id="Quantity" name="Quantity" value="@Model.Quantity" required>
+    </div>
+    <input type="submit" value="Update" class="btn btn-primary">
+</form>
+
+<a asp-action="Index" class="btn btn-secondary mt-3">Back to Products</a>
+

@@ -69,7 +69,7 @@ namespace StoreApp.Controllers
                 if (result.Succeeded)
                 {
                     await _signInManager.SignInAsync(user, isPersistent: false);
-                    return RedirectToAction("RegisterSuccess");
+                    return RedirectToAction("Index", "Product");
                 }
 
                 foreach (var error in result.Errors)

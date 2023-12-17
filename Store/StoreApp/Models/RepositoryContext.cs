@@ -19,7 +19,7 @@ namespace StoreApp.Models
 {
     base.OnModelCreating(modelBuilder);
 
-    // Identity tablolarını özelleştirmek istiyorsanız burada konfigürasyonlar yapabilirsiniz.
+    // Identity tablolarını özelleştirmek istiyForsanız burada konfigürasyonlar yapabilirsiniz.
 
     modelBuilder.Entity<Product>()
         .HasData(

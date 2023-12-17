@@ -1,16 +1,9 @@
 <div class="row my-3">
-    <div class="col-md-6">
-        <label for="sortOptions" class="form-label">Sort By:</label>
-        <select id="sortOptions" class="form-select" onchange="location = this.value;">
-            <option value="?sortOrder=quantity_asc">Quantity - Ascending</option>
-            <option value="?sortOrder=quantity_desc">Quantity - Descending</option>
-            <option value="?sortOrder=price_asc">Price - Ascending</option>
-            <option value="?sortOrder=price_desc">Price - Descending</option>
-        </select>
-    </div>
-    <div class="col-md-6 text-end">
-        <a asp-action="Create" class="btn btn-primary">Ekle</a>
-        <a asp-action="Delete" class="btn btn-danger">Sil</a>
+    <div class="col-md-6 text-start">
+        @if (User.IsInRole("Admin"))
+        {
+            <a asp-action="Create" class="btn btn-primary">Add</a>
+        }
     </div>
 </div>
 
@@ -21,6 +14,3 @@
     }
 </div>
 
-
-
-    

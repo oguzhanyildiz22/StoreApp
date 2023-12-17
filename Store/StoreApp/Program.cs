@@ -6,12 +6,11 @@ using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.AspNetCore.Identity;
 using StoreApp.Models;
-using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
-
+using StoreApp;
 
 var builder = WebApplication.CreateBuilder(args);
 
-builder.Services.AddControllersWithViews(); 
+builder.Services.AddControllersWithViews();
 
 builder.Services.AddDbContext<RepositoryContext>(options =>
 {
@@ -39,9 +38,13 @@ app.UseRouting();
 app.UseAuthentication();
 app.UseAuthorization();
 
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Home}/{action=Index}/{id?}");
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Home}/{action=Index}/{id?}");
+});
+
+SeedData.Initialize(app.Services).Wait();
 
 app.Run();
-

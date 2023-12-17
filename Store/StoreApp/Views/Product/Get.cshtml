@@ -1,15 +1,18 @@
 @model Product
 
+<div class="container mt-5">
+    <div class="row">
+        <div class="col-md-6">
+            <img src="~/images/default.jpg" class="img-fluid" alt="@Model.ProductName">
+        </div>
+        <div class="col-md-6">
+            <h1 class="display-4">@Model.ProductName</h1>
+            <p class="lead">Price: @Model.Price.ToString("c")</p>
+            <p>@Model.Description</p>
+            <p>Available Quantity: @Model.Quantity</p>
 
-<h3>@Model.ProductName</h3>
-<p>@Model.Price</p>
-
-<div class="btn-group">
-    <a class="btn btn-primary" asp-controller="Home" asp-action="Index">
-        <i class="fa-solid fa-house"></i>
-        Home</a>
-    <a class="btn btn-outline-primary" asp-controller="Product" asp-action="Index">
-        <i class="fa-solid fa-list"></i>
-        Products</a>
-
+            <a asp-action="Index" class="btn btn-primary">Back to Products</a>
+            <a asp-action="Update" asp-route-id="@Model.ProductId" method="get" class="btn btn-warning">Update</a>
+        </div>
+    </div>
 </div>
