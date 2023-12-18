@@ -107,12 +107,7 @@ namespace StoreApp.Controllers
         [Authorize(Roles = "Admin")]
         public IActionResult Update(Product updatedProduct)
         {
-            // ProductId'nin benzersiz olup olmadığını kontrol et
-            var existingProduct = _context.Products.FirstOrDefault(p => p.ProductId == updatedProduct.ProductId);
-            if (existingProduct != null)
-            {
-                ModelState.AddModelError("ProductId", "A product with the same ProductId already exists.");
-            }
+
 
             if (ModelState.IsValid)
             {
@@ -121,12 +116,8 @@ namespace StoreApp.Controllers
 
                 if (productToUpdate != null)
                 {
-                    // Veritabanından alınan ürünü güncelle
-                    productToUpdate.ProductName = updatedProduct.ProductName;
-                    productToUpdate.Price = updatedProduct.Price;
-                    productToUpdate.Quantity = updatedProduct.Quantity;
+                    _context.Entry(productToUpdate).CurrentValues.SetValues(updatedProduct);
 
-                    // Güncelleme işlemini kaydet
                     _context.SaveChanges();
 
                     TempData["UpdateSuccess"] = true; // Güncelleme başarılı olduğunu belirtmek için TempData kullanılıyor
@@ -142,6 +133,7 @@ namespace StoreApp.Controllers
             // Validation başarısız, formu tekrar göster
             return View(updatedProduct);
         }
+
 
 
         [HttpGet]
