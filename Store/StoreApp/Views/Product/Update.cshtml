@@ -1,8 +1,9 @@
-@model StoreApp.Models.Product
+@model Product
 
 <h1 class="display-4">Update Product</h1>
 
-<form method="post">
+<form asp-action="Update" method="post">
+    <input type="hidden" asp-for="ProductId" />
     <div class="mb-3">
         <label for="ProductName" class="form-label">Product Name</label>
         <input type="text" class="form-control" id="ProductName" name="ProductName" value="@Model.ProductName" required>
@@ -23,4 +24,3 @@
 </form>
 
 <a asp-action="Index" class="btn btn-secondary mt-3">Back to Products</a>
-
