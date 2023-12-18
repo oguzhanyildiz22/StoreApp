@@ -12,7 +12,10 @@
             <p>Available Quantity: @Model.Quantity</p>
 
             <a asp-action="Index" class="btn btn-primary">Back to Products</a>
-            <a asp-action="Update" asp-route-id="@Model.ProductId" method="get" class="btn btn-warning">Update</a>
+            @if (User.IsInRole("Admin"))
+            {
+                <a asp-action="Update" asp-route-id="@Model.ProductId" method="get" class="btn btn-warning">Update</a>
+            }
         </div>
     </div>
 </div>
