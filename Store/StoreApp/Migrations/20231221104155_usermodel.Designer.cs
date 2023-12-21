@@ -2,6 +2,7 @@
 using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StoreApp.Models;
 
@@ -10,9 +11,10 @@ using StoreApp.Models;
 namespace StoreApp.Migrations
 {
     [DbContext(typeof(RepositoryContext))]
-    partial class RepositoryContextModelSnapshot : ModelSnapshot
+    [Migration("20231221104155_usermodel")]
+    partial class usermodel
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder.HasAnnotation("ProductVersion", "6.0.0");
@@ -238,7 +240,7 @@ namespace StoreApp.Migrations
                         new
                         {
                             ProductId = 1,
-                            AddedDate = new DateTime(2023, 12, 21, 15, 43, 10, 551, DateTimeKind.Local).AddTicks(1980),
+                            AddedDate = new DateTime(2023, 12, 21, 13, 41, 55, 383, DateTimeKind.Local).AddTicks(1360),
                             Description = "High-performance computer",
                             Price = 17000m,
                             ProductName = "Computer",
@@ -247,7 +249,7 @@ namespace StoreApp.Migrations
                         new
                         {
                             ProductId = 2,
-                            AddedDate = new DateTime(2023, 12, 21, 15, 43, 10, 551, DateTimeKind.Local).AddTicks(2000),
+                            AddedDate = new DateTime(2023, 12, 21, 13, 41, 55, 383, DateTimeKind.Local).AddTicks(1370),
                             Description = "Mechanical keyboard",
                             Price = 1000m,
                             ProductName = "Keyboard",
@@ -256,7 +258,7 @@ namespace StoreApp.Migrations
                         new
                         {
                             ProductId = 3,
-                            AddedDate = new DateTime(2023, 12, 21, 15, 43, 10, 551, DateTimeKind.Local).AddTicks(2000),
+                            AddedDate = new DateTime(2023, 12, 21, 13, 41, 55, 383, DateTimeKind.Local).AddTicks(1370),
                             Description = "Wireless mouse",
                             Price = 500m,
                             ProductName = "Mouse",
@@ -265,7 +267,7 @@ namespace StoreApp.Migrations
                         new
                         {
                             ProductId = 4,
-                            AddedDate = new DateTime(2023, 12, 21, 15, 43, 10, 551, DateTimeKind.Local).AddTicks(2000),
+                            AddedDate = new DateTime(2023, 12, 21, 13, 41, 55, 383, DateTimeKind.Local).AddTicks(1380),
                             Description = "4K monitor",
                             Price = 7000m,
                             ProductName = "Monitor",
@@ -274,7 +276,7 @@ namespace StoreApp.Migrations
                         new
                         {
                             ProductId = 5,
-                            AddedDate = new DateTime(2023, 12, 21, 15, 43, 10, 551, DateTimeKind.Local).AddTicks(2000),
+                            AddedDate = new DateTime(2023, 12, 21, 13, 41, 55, 383, DateTimeKind.Local).AddTicks(1380),
                             Description = "Gaming desk",
                             Price = 1500m,
                             ProductName = "Desk",
