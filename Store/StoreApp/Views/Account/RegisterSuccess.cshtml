@@ -1,5 +1,8 @@
+<div class="text-center my-5">
+    <h2>Registration Successful</h2>
 
-
-<h2>Registration Successful</h2>
-
-<p>Your registration was successful. You can now <a asp-action="Login">log in</a>.</p>
+    <p>Your registration was successful. You can now login in </p>
+    <form asp-controller="Account" asp-action="Login">
+        <button  class="btn btn-primary" >Login</button>
+    </form>    
+</div>

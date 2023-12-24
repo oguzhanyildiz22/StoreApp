@@ -72,6 +72,7 @@ namespace StoreApp.Controllers
 
             return View(product);
         }
+        
 
         [HttpPost, ActionName("Delete")]
         [ValidateAntiForgeryToken]
@@ -120,7 +121,7 @@ namespace StoreApp.Controllers
 
                     _context.SaveChanges();
 
-                    TempData["UpdateSuccess"] = true; // Güncelleme başarılı olduğunu belirtmek için TempData kullanılıyor
+                    //TempData["UpdateSuccess"] = true; // Güncelleme başarılı olduğunu belirtmek için TempData kullanılıyor
                     return RedirectToAction("Index");
                 }
                 else

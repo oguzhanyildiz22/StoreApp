@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "coFDOOYpvJD8Cz2CH9bTd0KLzMm6fISm2hsVkAUkY3c=",
+  "Hash": "1nRXgJdDNCs8hTYHKGbxBfA7gJ6TiHQ1OvrwSKSaf88=",
   "Source": "StoreApp",
   "BasePath": "_content/StoreApp",
   "Mode": "Default",
@@ -55,12 +55,12 @@
       "OriginalItemSpec": "wwwroot/html/Error.html"
     },
     {
-      "Identity": "/Users/halitertas/Desktop/StoreApp/Store/StoreApp/wwwroot/images/default.jpg",
+      "Identity": "/Users/halitertas/Desktop/StoreApp/Store/StoreApp/wwwroot/images/product.jpg",
       "SourceId": "StoreApp",
       "SourceType": "Discovered",
       "ContentRoot": "/Users/halitertas/Desktop/StoreApp/Store/StoreApp/wwwroot/",
       "BasePath": "_content/StoreApp",
-      "RelativePath": "images/default.jpg",
+      "RelativePath": "images/product.jpg",
       "AssetKind": "All",
       "AssetMode": "All",
       "AssetRole": "Primary",
@@ -71,7 +71,7 @@
       "AssetTraitValue": "",
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
-      "OriginalItemSpec": "wwwroot/images/default.jpg"
+      "OriginalItemSpec": "wwwroot/images/product.jpg"
     },
     {
       "Identity": "/Users/halitertas/Desktop/StoreApp/Store/StoreApp/wwwroot/js/site.js",
